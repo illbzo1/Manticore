@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Total:</b>
+  <%= @hp.total %>
+</p>
+
+<p>
+  <b>Current:</b>
+  <%= @hp.current %>
+</p>
+
+<p>
+  <b>Nonlethal:</b>
+  <%= @hp.nonlethal %>
+</p>
+
+<p>
+  <b>Character:</b>
+  <%= @hp.character %>
+</p>
+
+
+<%= link_to 'Edit', edit_hp_path(@hp) %> |
+<%= link_to 'Back', hps_path %>

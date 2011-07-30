@@ -1,0 +1,12 @@
+<h1>Listing items</h1>
+
+<table>
+<% @character.items.each do |item| %>
+  <tr>
+    <td><%= item.name %></td>
+    <td><%= item.type %></td>
+    <td><%= item.location %></td>
+    <td><%= item.description %></td>
+  </tr>
+  <table>
+<% end %>

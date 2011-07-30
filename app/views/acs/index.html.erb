@@ -1,0 +1,43 @@
+<h1>Listing acs</h1>
+
+<table>
+  <tr>
+    <th>Total</th>
+    <th>Base</th>
+    <th>Armor</th>
+    <th>Shield</th>
+    <th>Dex</th>
+    <th>Size</th>
+    <th>Natural</th>
+    <th>Deflection</th>
+    <th>Misc</th>
+    <th>Reduction</th>
+    <th>Character</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @acs.each do |ac| %>
+  <tr>
+    <td><%= ac.total %></td>
+    <td><%= ac.base %></td>
+    <td><%= ac.armor %></td>
+    <td><%= ac.shield %></td>
+    <td><%= ac.dex %></td>
+    <td><%= ac.size %></td>
+    <td><%= ac.natural %></td>
+    <td><%= ac.deflection %></td>
+    <td><%= ac.misc %></td>
+    <td><%= ac.reduction %></td>
+    <td><%= ac.character %></td>
+    <td><%= link_to 'Show', ac %></td>
+    <td><%= link_to 'Edit', edit_ac_path(ac) %></td>
+    <td><%= link_to 'Destroy', ac, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ac', new_ac_path %>

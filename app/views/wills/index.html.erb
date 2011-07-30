@@ -1,0 +1,33 @@
+<h1>Listing wills</h1>
+
+<table>
+  <tr>
+    <th>Total</th>
+    <th>Base</th>
+    <th>Ability</th>
+    <th>Magic</th>
+    <th>Misc</th>
+    <th>Character</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @wills.each do |will| %>
+  <tr>
+    <td><%= will.total %></td>
+    <td><%= will.base %></td>
+    <td><%= will.ability %></td>
+    <td><%= will.magic %></td>
+    <td><%= will.misc %></td>
+    <td><%= will.character %></td>
+    <td><%= link_to 'Show', will %></td>
+    <td><%= link_to 'Edit', edit_will_path(will) %></td>
+    <td><%= link_to 'Destroy', will, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New will', new_will_path %>

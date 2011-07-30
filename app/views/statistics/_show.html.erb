@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>References:</b>
+  <%= @statistic.references %>
+</p>
+
+<p>
+  <b>Strength:</b>
+  <%= @statistic.strength %>
+</p>
+
+<p>
+  <b>Dexterity:</b>
+  <%= @statistic.dexterity %>
+</p>
+
+<p>
+  <b>Constitution:</b>
+  <%= @statistic.constitution %>
+</p>
+
+<p>
+  <b>Intelligence:</b>
+  <%= @statistic.intelligence %>
+</p>
+
+<p>
+  <b>Wisdom:</b>
+  <%= @statistic.wisdom %>
+</p>
+
+<p>
+  <b>Charisma:</b>
+  <%= @statistic.charisma %>
+</p>
+
+<%= link_to 'Edit', edit_statistics_path(@statistic) %> |
+<%= link_to 'Back', statistics_path %>

@@ -1,0 +1,33 @@
+<h1>Listing Reflexes</h1>
+
+<table>
+  <tr>
+    <th>Total</th>
+    <th>Base</th>
+    <th>Ability</th>
+    <th>Magic</th>
+    <th>Misc</th>
+    <th>Character</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @reflexes.each do |reflex| %>
+  <tr>
+    <td><%= reflex.total %></td>
+    <td><%= reflex.base %></td>
+    <td><%= reflex.ability %></td>
+    <td><%= reflex.magic %></td>
+    <td><%= reflex.misc %></td>
+    <td><%= reflex.character %></td>
+    <td><%= link_to 'Show', reflex %></td>
+    <td><%= link_to 'Edit', edit_reflex_path(reflex) %></td>
+    <td><%= link_to 'Destroy', reflex, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New reflex', new_reflex_path %>

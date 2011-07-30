@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Total:</b>
+  <%= @fortitude.total %>
+</p>
+
+<p>
+  <b>Base:</b>
+  <%= @fortitude.base %>
+</p>
+
+<p>
+  <b>Ability:</b>
+  <%= @fortitude.ability %>
+</p>
+
+<p>
+  <b>Magic:</b>
+  <%= @fortitude.magic %>
+</p>
+
+<p>
+  <b>Misc:</b>
+  <%= @fortitude.misc %>
+</p>
+
+<p>
+  <b>Character:</b>
+  <%= @fortitude.character %>
+</p>
+
+
+<%= link_to 'Edit', edit_fortitude_path(@fortitude) %> |
+<%= link_to 'Back', fortitudes_path %>

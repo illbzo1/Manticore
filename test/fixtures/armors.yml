@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  total: 1
+  base: 1
+  armor: 1
+  shield: 1
+  dex: 1
+  size: 1
+  natural: 1
+  deflection: 1
+  misc: 1
+  reduction: 1
+  character: 
+
+two:
+  total: 1
+  base: 1
+  armor: 1
+  shield: 1
+  dex: 1
+  size: 1
+  natural: 1
+  deflection: 1
+  misc: 1
+  reduction: 1
+  character: 

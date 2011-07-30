@@ -1,0 +1,67 @@
+<%= form_for ([@character, @armor_class]) do |f| %>
+  <% if @armor_class.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@armor_class.errors.count, "error") %> prohibited this armor_class from                 
+        being saved:</h2>
+
+      <ul>
+        <% @armor_class.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+    <%= f.label :total %><br />
+    <%= f.text_field :total %>
+  </div>
+  <div class="field">
+    <%= f.label :touch %><br />
+    <%= f.text_field :tac %>
+  </div>
+  <div class="field">
+    <%= f.label :flat %><br />
+    <%= f.text_field :ffac %>
+  </div>
+  <div class="field">
+    <%= f.label :base %><br />
+    <%= f.text_field :base %>
+  </div>
+  <div class="field">
+    <%= f.label :armor_class %><br />
+    <%= f.text_field :armor_class %>
+  </div>
+  <div class="field">
+    <%= f.label :shield %><br />
+    <%= f.text_field :shield %>
+  </div>
+  <div class="field">
+    <%= f.label :dex %><br />
+    <%= f.text_field :dex %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br />
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :natural %><br />
+    <%= f.text_field :natural %>
+  </div>
+  <div class="field">
+    <%= f.label :deflection %><br />
+    <%= f.text_field :deflection %>
+  </div>
+  <div class="field">
+    <%= f.label :misc %><br />
+    <%= f.text_field :misc %>
+  </div>
+  <div class="field">
+    <%= f.label :reduction %><br />
+    <%= f.text_field :reduction %>
+  </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  </div>
+<% end %>

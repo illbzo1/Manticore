@@ -1,0 +1,351 @@
+<%= render :partial => '/characters/menu' %>
+
+<%= link_to 'Edit', edit_character_path(@character) %> |
+<%= link_to 'Back to Character List', characters_path %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @character.name %>
+</p>
+
+<p>
+  <b>Profession:</b>
+  <%= @character.profession %>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%= @character.level %>
+</p>
+
+<p>
+  <b>Sex:</b>
+  <%= @character.sex %>
+</p>
+
+<p>
+  <b>Alignment:</b>
+  <%= @character.alignment %>
+</p>
+
+<p>
+  <b>Campaign:</b>
+  <%= @character.campaign %>
+</p>
+<hr>
+
+<h3>Hit Points</h3>
+<p>
+  <b>Total:</b>
+  <%= @hp.total || 'Not set' %>
+</p>
+
+<p>
+  <b>Current HP:</b>
+  <%= @hp.current || 'Not set' %>
+</p>
+
+<p>
+  <b>Nonlethal Damage:</b>
+  <%= @hp.nonlethal || 'Not set' %>
+</p>
+
+<% if @hp.new_record? %>
+  <%= link_to 'Add Hit Points', new_character_hp_path(@character) %>
+<% else %>
+  <%= link_to 'Edit Hit Points', edit_character_hp_path(@character,@hp) %>
+<% end %>
+
+<%#= render "hps/form" %>
+
+<hr/>
+
+<h3>Initiative</h3>
+<p>
+  <b>Total:</b>
+  <%= @initiative.total || 'Not set' %>
+</p>
+
+<p>
+  <b>Dexterity Modifier:</b>
+  <%= @initiative.dex || 'Not set' %>
+</p>
+
+<p>
+  <b>Miscellaneous Modifier:</b>
+  <%= @initiative.misc || 'Not set' %>
+</p>
+
+<p>
+  <b>Speed:</b>
+  <%= @initiative.speed || 'Not set' %>
+</p>
+
+<% if @initiative.new_record? %>
+  <%= link_to 'Add Initiative Information', new_character_initiative_path(@character) %>
+<% else %>
+  <%= link_to 'Edit Initiative Information', edit_character_initiative_path(@character,@initiative) %>
+<% end %>
+
+<%#= render "initiatives/form" %>
+
+<hr/>
+<h2>Statistics</h2>
+<p>
+  <b>Strength:</b>
+  <%= @statistic.strength || 'Not set' %>
+</p>
+
+<p>
+  <b>Dexterity:</b>
+  <%= @statistic.dexterity || 'Not set' %>
+</p>
+
+<p>
+  <b>Constitution:</b>
+  <%= @statistic.constitution || 'Not set' %>
+</p>
+
+<p>
+  <b>Intelligence:</b>
+  <%= @statistic.intelligence || 'Not set' %>
+</p>
+
+<p>
+  <b>Wisdom:</b>
+  <%= @statistic.wisdom || 'Not set' %>
+</p>
+
+<p>
+  <b>Charisma:</b>
+  <%= @statistic.charisma || 'Not set' %>
+</p>
+
+<% if @statistic.new_record? %>
+  <%= link_to 'Add Statistics', new_character_statistic_path(@character) %>
+<% else %>
+  <%= link_to 'Edit Statistics', edit_character_statistic_path(@character,@statistic) %>
+<% end %>
+
+<%#= render "statistics/form" %>
+<hr/>
+<h2>Saving Throws</h2>
+<h3>Fortitude</h3>
+<p>
+  <b>Total:</b>
+  <%= @fortitude.total || 'Not set' %>
+</p>
+
+<p>
+  <b>Base Save:</b>
+  <%= @fortitude.base || 'Not set' %>
+</p>
+
+<p>
+  <b>Ability Modifier:</b>
+  <%= @fortitude.ability || 'Not set' %>
+</p>
+
+<p>
+  <b>Magic Modifier:</b>
+  <%= @fortitude.magic || 'Not set' %>
+</p>
+
+<p>
+  <b>Miscellaneous Modifier:</b>
+  <%= @fortitude.misc || 'Not set' %>
+</p>
+
+<% if @fortitude.new_record? %>
+  <%= link_to 'Add Fortitude Saving Throw', new_character_fortitude_path(@character) %>
+<% else %>
+  <%= link_to 'Edit Fortitude Saving Throw', edit_character_fortitude_path(@character,@fortitude) %>
+<% end %>
+
+<%#= render "fortitudes/form" %>
+
+<h3>Reflex</h3>
+<p>
+  <b>Total:</b>
+  <%= @reflex.total || 'Not set' %>
+</p>
+
+<p>
+  <b>Base Save:</b>
+  <%= @reflex.base || 'Not set' %>
+</p>
+
+<p>
+  <b>Ability Modifier:</b>
+  <%= @reflex.ability || 'Not set' %>
+</p>
+
+<p>
+  <b>Magic Modifier:</b>
+  <%= @reflex.magic || 'Not set' %>
+</p>
+
+<p>
+  <b>Miscellaneous Modifier:</b>
+  <%= @reflex.misc || 'Not set' %>
+</p>
+
+<% if @reflex.new_record? %>
+  <%= link_to 'Add Reflex Saving Throw', new_character_reflex_path(@character) %>
+<% else %>
+  <%= link_to 'Edit Reflex Saving Throw', edit_character_reflex_path(@character,@reflex) %>
+<% end %>
+
+<%#= render "reflexes/form" %>
+
+<h3>Will</h3>
+<p>
+  <b>Total:</b>
+  <%= @will.total || 'Not set' %>
+</p>
+
+<p>
+  <b>Base Save:</b>
+  <%= @will.base || 'Not set' %>
+</p>
+
+<p>
+  <b>Ability Modifier:</b>
+  <%= @will.ability || 'Not set' %>
+</p>
+
+<p>
+  <b>Magic Modifier:</b>
+  <%= @will.magic || 'Not set' %>
+</p>
+
+<p>
+  <b>Miscellaneous Modifier:</b>
+  <%= @will.misc || 'Not set' %>
+</p>
+
+<% if @will.new_record? %>
+  <%= link_to 'Add Will Saving Throw', new_character_will_path(@character) %>
+<% else %>
+  <%= link_to 'Edit Will Saving Throw', edit_character_will_path(@character,@will) %>
+<% end %>
+
+<%#= render "wills/form" %>
+
+<hr/>
+
+<h3>ac Class</h3>
+<p>
+  <b>Total:</b>
+  <%= @ac.total || 'Not set' %>
+</p>
+
+<p>
+  <b>Touch:</b>
+  <%= @ac.tac || 'Not set' %>
+</p>
+
+<p>
+  <b>Flat-footed:</b>
+  <%= @ac.ffac || 'Not set' %>
+</p>
+
+<p>
+  <b>Base:</b>
+  <%= @ac.base || 'Not set' %>
+</p>
+
+<p>
+  <b>Armor:</b>
+  <%= @ac.armor || 'Not set' %>
+</p>
+
+<p>
+  <b>Shield:</b>
+  <%= @ac.shield || 'Not set' %>
+</p>
+
+<p>
+  <b>Dexterity Modifier:</b>
+  <%= @ac.dex || 'Not set' %>
+</p>
+
+<p>
+  <b>Size Modifier:</b>
+  <%= @ac.size || 'Not set' %>
+</p>
+
+<p>
+  <b>Natural ac:</b>
+  <%= @ac.natural || 'Not set' %>
+</p>
+
+<p>
+  <b>Deflection Modifier:</b>
+  <%= @ac.dex || 'Not set' %>
+</p>
+
+<p>
+  <b>Miscellaneous Modifier:</b>
+  <%= @ac.misc || 'Not set' %>
+</p>
+
+<p>
+  <b>Damage Reduction:</b>
+  <%= @ac.reduction || 'Not set' %>
+</p>
+
+<p>
+  <b>Spell Resistance:</b>
+  <%= @ac.sr || 'Not set' %>
+</p>
+
+<% if @ac.new_record? %>
+  <%= link_to 'Add Armor Class Information', new_character_ac_path(@character) %>
+<% else %>
+  <%= link_to 'Edit Armor Class Information', edit_character_ac_path(@character,@ac) %>
+<% end %>
+
+<%#= render "acs/form" %>
+
+<hr/>
+
+<h2>Add an item:</h2>
+
+<%= form_for ([@character, @character.items.build]) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br />
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<table>
+<% @character.items.each do |item| %>
+  <tr>
+    <td><%= item.name %></td>
+    <td><%= item.type %></td>
+    <td><%= item.location %></td>
+    <td><%= item.description %></td>
+  </tr>
+  <table>
+<% end %>
+
+<%= link_to 'Edit', edit_character_path(@character) %> |
+<%= link_to 'Back to Character List', characters_path %>

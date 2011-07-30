@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  profession: MyString
+  level: 1
+  sex: MyString
+  alignment: MyString
+  campaign: MyString
+
+two:
+  name: MyString
+  profession: MyString
+  level: 1
+  sex: MyString
+  alignment: MyString
+  campaign: MyString

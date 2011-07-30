@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  total: 
+  current: 1
+  nonlethal: 1
+  character: 
+
+two:
+  total: 
+  current: 1
+  nonlethal: 1
+  character: 

@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  total: 1
+  base: 1
+  ability: 1
+  magic: 1
+  misc: 1
+  character: 
+
+two:
+  total: 1
+  base: 1
+  ability: 1
+  magic: 1
+  misc: 1
+  character: 

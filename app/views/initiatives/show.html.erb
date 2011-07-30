@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Total:</b>
+  <%= @initiative.total %>
+</p>
+
+<p>
+  <b>Dex:</b>
+  <%= @initiative.dex %>
+</p>
+
+<p>
+  <b>Misc:</b>
+  <%= @initiative.misc %>
+</p>
+
+<p>
+  <b>Speed:</b>
+  <%= @initiative.speed %>
+</p>
+
+
+<%= link_to 'Edit', edit_initiative_path(@initiative) %> |
+<%= link_to 'Back', initiatives_path %>

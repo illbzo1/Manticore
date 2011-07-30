@@ -1,0 +1,29 @@
+<h1>Listing hps</h1>
+
+<table>
+  <tr>
+    <th>Total</th>
+    <th>Current</th>
+    <th>Nonlethal</th>
+    <th>Character</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hps.each do |hp| %>
+  <tr>
+    <td><%= hp.total %></td>
+    <td><%= hp.current %></td>
+    <td><%= hp.nonlethal %></td>
+    <td><%= hp.character %></td>
+    <td><%= link_to 'Show', hp %></td>
+    <td><%= link_to 'Edit', edit_hp_path(hp) %></td>
+    <td><%= link_to 'Destroy', hp, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hp', new_hp_path %>
