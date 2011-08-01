@@ -18,9 +18,9 @@ class ItemsController < ApplicationController
     @item = @character.create_item(params[:item])
   end
   
-  def edit
+  def edit    
    @character = Character.find(params[:character_id])
-   @item = @character.item
+   @item = @character.items.find(params[:item])
   end
   
   def create
@@ -49,7 +49,5 @@ class ItemsController < ApplicationController
       render :action => "edit"
     end
   end
-
-     
-     
+  
 end
