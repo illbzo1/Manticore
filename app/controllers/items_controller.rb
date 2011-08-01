@@ -1,7 +1,16 @@
 class ItemsController < ApplicationController
   
   def index
-    @items = Item.all
+    @character = Character.find(params[:character_id])
+  end
+  
+  def show
+    @item = Character.item.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @order }
+    end
   end
   
   def new
@@ -10,31 +19,37 @@ class ItemsController < ApplicationController
   end
   
   def edit
-    @character = Character.find(params[:character_id])
-    @item = @character.item
+   @character = Character.find(params[:character_id])
+   @item = @character.item
   end
   
   def create
     @character = Character.find(params[:character_id])
     @item = @character.items.create(params[:item])
-     redirect_to character_path(@character), :notice => "Item successfully created!"
+    redirect_to character_items_path, :notice => "Item successfully created!"
    end
    
   def destroy
-    @character = character.find(params[:character_id])
+    @character = Character.find(params[:character_id])
     @item = @character.items.find(params[:id])
     @item.destroy
-    redirect_to character_path(@character)
+    
+    respond_to do |format|
+      format.html { redirect_to(character_items_path, :notice => "Item deleted.") }
+      format.xml  { head :ok }
+    end
   end
   
   def update
     @character = Character.find(params[:character_id])
     @item = @character.item
     if @item.update_attributes(params[:item])
-      redirect_to character_path(@character), :notice => 'item information was successfully updated.'
+      redirect_to character_items_path, :notice => 'Item was successfully updated.'
     else
       render :action => "edit"
     end
   end
+
+     
      
 end

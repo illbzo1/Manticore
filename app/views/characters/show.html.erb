@@ -312,40 +312,5 @@
 
 <hr/>
 
-<h2>Add an item:</h2>
-
-<%= form_for ([@character, @character.items.build]) do |f| %>
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :type %><br />
-    <%= f.text_field :type %>
-  </div>
-  <div class="field">
-    <%= f.label :location %><br />
-    <%= f.text_field :location %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
-
-<table>
-<% @character.items.each do |item| %>
-  <tr>
-    <td><%= item.name %></td>
-    <td><%= item.type %></td>
-    <td><%= item.location %></td>
-    <td><%= item.description %></td>
-  </tr>
-  <table>
-<% end %>
-
 <%= link_to 'Edit', edit_character_path(@character) %> |
 <%= link_to 'Back to Character List', characters_path %>
