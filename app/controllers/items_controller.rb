@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
   
   def edit    
    @character = Character.find(params[:character_id])
-   @item = @character.items.find(params[:item])
+   @item = @character.items.find(params[:id])
   end
   
   def create
