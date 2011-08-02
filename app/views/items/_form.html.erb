@@ -1,6 +1,6 @@
 <h2>Add an item</h2>
 
-<%= form_for ([@character, @character.items.build]) do |f| %>
+<%= form_for ([@character, @item]) do |f| %>
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>

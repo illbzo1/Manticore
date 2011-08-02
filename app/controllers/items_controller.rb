@@ -4,15 +4,6 @@ class ItemsController < ApplicationController
     @character = Character.find(params[:character_id])
   end
   
-  def show
-    @item = Character.item.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @order }
-    end
-  end
-  
   def new
     @character = Character.find(params[:character_id])
     @item = @character.create_item(params[:item])
@@ -29,6 +20,25 @@ class ItemsController < ApplicationController
     redirect_to character_items_path, :notice => "Item successfully created!"
    end
    
+   def update
+     @character = Character.find(params[:character_id])
+     @item = @character.item
+     if @item.update_attributes(params[:item])
+       redirect_to character_items_path, :notice => 'Item was successfully updated.'
+     else
+       render :action => "edit"
+     end
+   end
+   
+  def show
+    @item = Character.item.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @order }
+    end
+  end
+   
   def destroy
     @character = Character.find(params[:character_id])
     @item = @character.items.find(params[:id])
@@ -39,15 +49,5 @@ class ItemsController < ApplicationController
       format.xml  { head :ok }
     end
   end
-  
-  def update
-    @character = Character.find(params[:character_id])
-    @item = @character.item
-    if @item.update_attributes(params[:item])
-      redirect_to character_items_path, :notice => 'Item was successfully updated.'
-    else
-      render :action => "edit"
-    end
-  end
-  
+
 end
