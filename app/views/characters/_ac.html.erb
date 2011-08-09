@@ -1,0 +1,45 @@
+<div id="ac" class="float_left">
+<b>Armor Class Total:</b>
+<%= @ac.total || '-' %>
+
+<b>Touch:</b>
+<%= @ac.tac || '-' %>
+
+<b>Flat-footed:</b>
+<%= @ac.ffac || '-' %>
+
+<b>Base:</b>
+<%= @ac.base || '-' %>
+<b>Armor:</b>
+<%= @ac.armor || '-' %>
+
+<b>Shield:</b>
+<%= @ac.shield || '-' %>
+
+<b>Dexterity:</b>
+<%= @ac.dex || '-' %>
+
+<b>Size:</b>
+<%= @ac.size || '-' %>
+
+<b>Natural:</b>
+<%= @ac.natural || '-' %>
+
+<b>Deflection:</b>
+<%= @ac.dex || '-' %>
+
+<b>Miscellaneous:</b>
+<%= @ac.misc || '-' %>
+
+<b>Damage Reduction:</b>
+<%= @ac.reduction || '-' %>
+
+<b>Spell Resistance:</b>
+<%= @ac.sr || '-' %>
+<br />
+<% if @ac.new_record? %>
+<%= link_to 'Add Armor Class Information', new_character_ac_path(@character) %>
+<% else %>
+<%= link_to 'Edit Armor Class Information', edit_character_ac_path(@character,@ac) %>
+<% end %>
+</div>

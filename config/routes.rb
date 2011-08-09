@@ -9,6 +9,9 @@ Manticore::Application.routes.draw do
     resources :hps
     resources :initiatives
     resources :items
+    resources :backgrounds
+    resources :specials
+    resources :feats
   end
     
   get "home/index"

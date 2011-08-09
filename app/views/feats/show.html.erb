@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Feat desc:</b>
+  <%= @feat.feat_desc %>
+</p>
+
+<p>
+  <b>Feat benefit:</b>
+  <%= @feat.feat_benefit %>
+</p>
+
+<p>
+  <b>Feat special:</b>
+  <%= @feat.feat_special %>
+</p>
+
+<p>
+  <b>Character:</b>
+  <%= @feat.character %>
+</p>
+
+
+<%= link_to 'Edit', edit_feat_path(@feat) %> |
+<%= link_to 'Back', feats_path %>

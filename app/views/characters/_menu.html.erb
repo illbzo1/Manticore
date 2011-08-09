@@ -1,7 +1,11 @@
-<%= link_to_unless_current 'Character', character_path(@character)  %>
-
-<%= link_to_unless_current 'Items', character_items_path(@character)  %>
+<div id="menu">
+<%= link_to_unless_current @character.name, character_path(@character)  %>
+<%= link_to_unless_current 'Items', character_items_path(@character) if @character.items.exists? %>
 Skills
-...
-
-<hr />
+<%= link_to_unless_current 'Special Abilities', character_specials_path(@character) if @character.specials.exists?  %>
+Spells
+<div class="float_right">
+<%= link_to 'Edit', edit_character_path(@character) %>
+<%= link_to 'Back', characters_path %>
+</div>
+</div>

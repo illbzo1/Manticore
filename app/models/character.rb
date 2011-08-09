@@ -6,7 +6,9 @@ class Character < ActiveRecord::Base
   has_one :ac, :dependent => :destroy
   has_one :hp, :dependent => :destroy
   has_one :initiative, :dependent => :destroy
+  has_one :background, :dependent => :destroy
   has_many :items, :dependent => :destroy
+  has_many :specials, :dependent => :destroy
     
   def to_s
     "name (ac: #{armor.total})"

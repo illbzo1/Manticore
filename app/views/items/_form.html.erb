@@ -1,13 +1,11 @@
-<h2>Add an item</h2>
-
 <%= form_for ([@character, @item]) do |f| %>
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :type %><br />
-    <%= f.text_field :type %>
+    <%= f.label :item_type %><br />
+    <%= f.text_field :item_type %>
   </div>
   <div class="field">
     <%= f.label :location %><br />

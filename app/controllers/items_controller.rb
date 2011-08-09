@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   
   def index
     @character = Character.find(params[:character_id])
+    @item = @character.items.build
   end
   
   def new
@@ -22,7 +23,7 @@ class ItemsController < ApplicationController
    
    def update
      @character = Character.find(params[:character_id])
-     @item = @character.item
+     @item = @character.items.find(params[:id])
      if @item.update_attributes(params[:item])
        redirect_to character_items_path, :notice => 'Item was successfully updated.'
      else

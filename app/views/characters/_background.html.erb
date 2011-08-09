@@ -1,0 +1,20 @@
+<div id="background" class="float_left">
+
+  <b>Background:</b>
+  <%= @background.bg || 'Not set' %>
+  <br />
+
+  <b>Physical:</b>
+  <%= @background.physical || 'Not set' %>
+  <br />
+  
+  <b>Personality:</b>
+  <%= @background.personality || 'Not set' %>
+  <br />
+  
+<% if @background.new_record? %>
+  <%= link_to 'Add Background Information', new_character_background_path(@character) %>
+<% else %>
+<%= link_to 'Edit Background', edit_character_background_path(@character, @background) %>
+<% end %>
+</div>

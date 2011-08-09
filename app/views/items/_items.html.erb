@@ -1,16 +1,18 @@
 <h2><%= @character.name %>'s Inventory</h2>
 
-<table>
-<% @character.items.each do |item| %>
-  <tr>
-    <td><%= item.name %></td>
-    <td><%= item.type %></td>
-    <td><%= item.location %></td>
-    <td><%= item.description %></td>
-    <td><%= link_to 'Destroy', [item.character, item],
-                   :confirm => 'Are you sure?',
-                   :method => :delete %></td>
-    <td><%= link_to 'Edit', edit_character_item_path(@character, item) %></td>                  
-  </tr>
+<% @character.items.reject {|item| item.new_record? }.each do |item| %>
+    <b>Name:</b>
+    <%= item.name %>
+    <b>Type:</b>
+    <%= item.item_type %>
+    <b>Location:</b>
+    <%= item.location %>
+    <b>Description:</b>
+    <%= item.description %>
+    <br />
+    <%= link_to 'Destroy', [item.character, item], 
+                  :confirm => 'Are you sure?',
+                  :method => :delete %>
+                  <%= link_to 'Edit', edit_character_item_path(@character, item) %>  
+                  <br />
 <% end %>
-</table>

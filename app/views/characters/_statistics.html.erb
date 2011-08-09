@@ -1,0 +1,32 @@
+<div id="stats" class="float_left">
+
+  <b>Strength:</b>
+  <%= @statistic.strength || 'Not set' %>
+  <br />
+
+  <b>Dexterity:</b>
+  <%= @statistic.dexterity || 'Not set' %>
+  <br />
+  
+  <b>Constitution:</b>
+  <%= @statistic.constitution || 'Not set' %>
+  <br />
+  
+  <b>Intelligence:</b>
+  <%= @statistic.intelligence || 'Not set' %>
+  <br />
+
+  <b>Wisdom:</b>
+  <%= @statistic.wisdom || 'Not set' %>
+  <br />
+
+  <b>Charisma:</b>
+  <%= @statistic.charisma || 'Not set' %>
+  <br />
+
+<% if @statistic.new_record? %>
+  <%= link_to 'Add Statistics', new_character_statistic_path(@character) %>
+<% else %>
+  <%= link_to 'Edit Statistics', edit_character_statistic_path(@character,@statistic) %>
+<% end %>
+</div>

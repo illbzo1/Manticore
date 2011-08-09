@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110730210513) do
+ActiveRecord::Schema.define(:version => 20110808220146) do
 
   create_table "acs", :force => true do |t|
     t.integer  "total"
@@ -31,6 +31,15 @@ ActiveRecord::Schema.define(:version => 20110730210513) do
     t.integer  "sr"
   end
 
+  create_table "backgrounds", :force => true do |t|
+    t.text     "bg"
+    t.text     "physical"
+    t.text     "personality"
+    t.integer  "character_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "characters", :force => true do |t|
     t.string   "name"
     t.string   "profession"
@@ -38,6 +47,15 @@ ActiveRecord::Schema.define(:version => 20110730210513) do
     t.string   "sex"
     t.string   "alignment"
     t.string   "campaign"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "feats", :force => true do |t|
+    t.text     "feat_desc"
+    t.text     "feat_benefit"
+    t.text     "feat_notes"
+    t.integer  "character_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -74,7 +92,7 @@ ActiveRecord::Schema.define(:version => 20110730210513) do
 
   create_table "items", :force => true do |t|
     t.string   "name"
-    t.string   "type"
+    t.string   "item_type"
     t.string   "location"
     t.text     "description"
     t.integer  "character_id"
@@ -91,6 +109,16 @@ ActiveRecord::Schema.define(:version => 20110730210513) do
     t.integer  "character_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "specials", :force => true do |t|
+    t.text     "special_desc"
+    t.text     "special_benefit"
+    t.text     "special_notes"
+    t.integer  "character_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "special_name"
   end
 
   create_table "statistics", :force => true do |t|

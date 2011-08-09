@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Special desc:</b>
+  <%= @special.special_desc %>
+</p>
+
+<p>
+  <b>Special benefit:</b>
+  <%= @special.special_benefit %>
+</p>
+
+<p>
+  <b>Special notes:</b>
+  <%= @special.special_notes %>
+</p>
+
+<p>
+  <b>Character:</b>
+  <%= @special.character %>
+</p>
+
+
+<%= link_to 'Edit', edit_special_path(@special) %> |
+<%= link_to 'Back', specials_path %>

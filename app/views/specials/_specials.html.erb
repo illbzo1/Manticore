@@ -1,0 +1,18 @@
+<h2><%= @character.name %>'s Special Abilities</h2>
+
+<% @character.specials.reject {|special| special.new_record? }.each do |special| %>
+    <b>Name:</b>
+    <%= special.special_name %>
+    <b>Description:</b>
+    <%= special.special_desc %>
+    <b>Benefit:</b>
+    <%= special.special_benefit %>
+    <b>Notes:</b>
+    <%= special.special_notes %>
+    <br />
+    <%= link_to 'Destroy', [special.character, special], 
+                  :confirm => 'Are you sure?',
+                  :method => :delete %>
+                  <%= link_to 'Edit', edit_character_special_path(@character, special) %>  
+                  <br />
+<% end %>

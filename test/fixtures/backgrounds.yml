@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  bg: MyText
+  physical: MyText
+  personality: MyText
+  character: 
+
+two:
+  bg: MyText
+  physical: MyText
+  personality: MyText
+  character: 

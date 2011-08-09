@@ -1,0 +1,29 @@
+<%= form_for ([@character, @background]) do |f| %>
+<% if @background.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@statistic.errors.count, "error") %> prohibited this record from                 
+        being saved:</h2>
+      <ul>
+        <% @background.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :background %><br />
+    <%= f.text_area :bg %>
+  </div>
+  <div class="field">
+    <%= f.label :physical %><br />
+    <%= f.text_area :physical %>
+  </div>
+  <div class="field">
+    <%= f.label :personality %><br />
+    <%= f.text_area :personality %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

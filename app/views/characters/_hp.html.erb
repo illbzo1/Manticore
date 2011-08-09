@@ -1,0 +1,17 @@
+<div id="hp" class="float_left">
+
+<b>Total HP:</b>
+<%= @hp.total || 'Not set' %>
+
+<b>Current HP:</b>
+<%= @hp.current || 'Not set' %>
+
+<b>Nonlethal Damage:</b>
+<%= @hp.nonlethal || 'Not set' %>
+<br />
+<% if @hp.new_record? %>
+  <%= link_to 'Add Hit Points', new_character_hp_path(@character) %>
+<% else %>
+  <%= link_to 'Edit Hit Points', edit_character_hp_path(@character,@hp) %>
+<% end %>
+</div>

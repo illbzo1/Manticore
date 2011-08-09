@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  feat_desc: MyText
+  feat_benefit: MyText
+  feat_special: MyText
+  character: 
+
+two:
+  feat_desc: MyText
+  feat_benefit: MyText
+  feat_special: MyText
+  character: 

@@ -1,0 +1,33 @@
+<%= form_for(@feat) do |f| %>
+  <% if @feat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@feat.errors.count, "error") %> prohibited this feat from being saved:</h2>
+
+      <ul>
+      <% @feat.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :feat_desc %><br />
+    <%= f.text_area :feat_desc %>
+  </div>
+  <div class="field">
+    <%= f.label :feat_benefit %><br />
+    <%= f.text_area :feat_benefit %>
+  </div>
+  <div class="field">
+    <%= f.label :feat_special %><br />
+    <%= f.text_area :feat_special %>
+  </div>
+  <div class="field">
+    <%= f.label :character %><br />
+    <%= f.text_field :character %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

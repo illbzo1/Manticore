@@ -1,29 +1,10 @@
 <h1>Listing characters</h1>
 
 <table>
-  <tr>
-    <th>Name</th>
-    <th>Profession</th>
-    <th>Level</th>
-    <th>Sex</th>
-    <th>Alignment</th>
-    <th>Campaign</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
 <% @characters.each do |character| %>
   <tr>
-    <td><%= character.name %></td>
-    <td><%= character.profession %></td>
-    <td><%= character.level %></td>
-    <td><%= character.sex %></td>
-    <td><%= character.alignment %></td>
-    <td><%= character.campaign %></td>
-    <td><%= link_to 'Show', character %></td>
-    <td><%= link_to 'Edit', edit_character_path(character) %></td>
-    <td><%= link_to 'Destroy', character, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to character.name, character %></td>
   </tr>
 <% end %>
 </table>

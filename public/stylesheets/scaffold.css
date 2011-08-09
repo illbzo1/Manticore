@@ -1,56 +1,244 @@
-body { background-color: #fff; color: #333; }
+/* Global styles */
 
-body, p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
-  line-height: 18px;
+body
+{
+background-color: #E8E8E8;
+font-family: Helvetica, Verdana, sans-serif; 
+font-size: 20px;
 }
 
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
+a:link {color: #CD4C39; text-decoration: underline; }
+a:active {color: #CD4C39; text-decoration: underline; }
+a:visited {color: #CD4C39; text-decoration: underline; }
+a:hover {color: #CD4C39; text-decoration: none; }
+/* Form styles */
+
+/* Character show page styles */
+
+.float_left {
+  background-color: #FFFFFF;
+  color:  #000;
+  font-size: 16px;
+  margin: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;
+  float: left;
+  margin: 10px;
+}
+.float_right {  
+  float: right;
+
+}
+#menu {
+  background-color: #ddd;
+  border-bottom: 1px solid #aaa;
+  padding: 5px;
+  }
+
+}
+#characters {
+  
+}
+#details {
+
 }
 
-a { color: #000; }
-a:visited { color: #666; }
-a:hover { color: #fff; background-color:#000; }
+#hp {
 
-div.field, div.actions {
+}
+
+#ac {
+  width: 40em;
+  clear: right;
+}
+
+#stats {
+clear: left;
+height: 12em;
+}
+
+#saves {
+
+}
+
+#initiative {
+}
+
+#background {
+
+clear: left;
+width: 50em;
+}
+
+#banner img {
+  float: left;
+}
+
+#main img {
+  width:      90px;
+  height:     105px;
+  border:     1px solid #000;
+}
+
+#locale {
+  float: right;
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #282;
+}
+
+#columns {
+  background: #141;
+}
+
+#main {
+  margin-left: 22em;
+  padding-top: 4ex;
+  padding-left: 2em;
+  background: white;
+}
+
+#side {
+  color :#fff;
+  float: left;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  width: 21em;
+  background: #141;
+}
+
+#menu {
+  margin-top: 10px;
+}
+#side_info {
+  color :#fff;
+  padding-bottom: 1em;
+}
+
+#side a {
+  color: #bfb;
+  font-size: small;
+}
+/* Styles for the cart in the sidebar */
+
+#cart {
+  border-top: 1px solid #595;
+  border-bottom: 1px solid #595;
+  }
+  
+#cart, #cart table {
+  font-size: smaller;
+  color: white;
+}
+
+#cart table {
+
   margin-bottom: 10px;
+  margin-top: 10px;
+  margin-right: 5px;
+  border-collapse: collapse;
+
 }
 
-#notice {
-  color: green;
+.depot_form fieldset {
+  background: #efe;
 }
 
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
+.depot_form legend {
+  color: #dfd;
+  background: #141;
+  font-family: sans-serif;
+  padding: 0.2em 1em;
 }
 
-#error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
+.depot_form label {
+  width: 5em;
+  float: left;
+  text-align: right;
+  padding-top: 0.2em;
+  margin-right: 0.1em;
+  display: block;
 }
 
-#error_explanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  margin-bottom: 0px;
-  background-color: #c00;
-  color: #fff;
+.depot_form select, .depot_form textarea, .depot_form input {
+  margin-left: 0.5em;
 }
 
-#error_explanation ul li {
-  font-size: 12px;
-  list-style: square;
+.depot_form .submit {
+  margin-left: 4em;
 }
+
+.depot_form div {
+  margin: 0.5em 0;
+}
+
+
+#store #notice {
+        color: #000;
+        border: 2px solid red;
+        padding: 1em;
+        margin-bottom: 2em;
+        background-color: #f0f0f0;
+        font: bold smaller sans-serif;
+}
+
+#store .entry form, #store .entry form div {
+  display:inline;
+}
+
+#store h1 {
+        font:  150% sans-serif;
+        color: #226;
+        border-bottom: 3px dotted #77d;
+}
+
+/* Styles for products/index */
+
+#product_list table {
+        border-collapse: collapse;
+}
+
+#product_list table tr td {
+        padding: 5px;
+        vertical-align: top;
+}
+
+#product_list .list_description {
+  width:        60%;
+}
+
+#product_list .list_description dl {
+        margin: 0;
+}
+
+#product_list .list_description dt {
+	color:        #244;
+	font-weight:  bold;
+	font-size:    larger;
+}
+
+#product_list .list_description dd {
+        margin: 0;
+}
+
+#product_list .list_actions {
+  font-size:    x-small;
+  text-align:   right;
+  padding-left: 1em;
+}
+
+#product_list .list_line_even {
+  background:   #e0f8f8;
+}
+
+#product_list .list_line_odd {
+  background:   #f8b0f8;
+}
+
