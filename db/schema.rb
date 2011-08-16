@@ -10,11 +10,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110808220146) do
+ActiveRecord::Schema.define(:version => 20110816000226) do
 
   create_table "acs", :force => true do |t|
     t.integer  "total"
-    t.integer  "base"
+    t.integer  "base_ac"
     t.integer  "armor"
     t.integer  "shield"
     t.integer  "dex"
@@ -26,8 +26,6 @@ ActiveRecord::Schema.define(:version => 20110808220146) do
     t.integer  "character_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "tac"
-    t.integer  "ffac"
     t.integer  "sr"
   end
 
@@ -119,6 +117,23 @@ ActiveRecord::Schema.define(:version => 20110808220146) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "special_name"
+  end
+
+  create_table "spells", :force => true do |t|
+    t.string   "school"
+    t.string   "level"
+    t.string   "components"
+    t.string   "casting_time"
+    t.string   "range"
+    t.string   "target"
+    t.string   "duration"
+    t.string   "saving_throw"
+    t.string   "spell_resistance"
+    t.text     "description"
+    t.integer  "character_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
   end
 
   create_table "statistics", :force => true do |t|

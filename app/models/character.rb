@@ -9,8 +9,9 @@ class Character < ActiveRecord::Base
   has_one :background, :dependent => :destroy
   has_many :items, :dependent => :destroy
   has_many :specials, :dependent => :destroy
-    
-  def to_s
-    "name (ac: #{armor.total})"
-  end
+  has_many :spells, :dependent => :destroy
+  
+  validates_presence_of :name, :profession, :level, :sex, :alignment, :campaign
+  validates_numericality_of :level
+  
 end

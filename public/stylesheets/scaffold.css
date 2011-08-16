@@ -98,10 +98,8 @@ width: 50em;
 }
 
 #main {
-  margin-left: 22em;
-  padding-top: 4ex;
-  padding-left: 2em;
-  background: white;
+  margin-left: 3em;
+  margin-right: 3em;
 }
 
 #side {

@@ -12,6 +12,7 @@ Manticore::Application.routes.draw do
     resources :backgrounds
     resources :specials
     resources :feats
+    resources :spells
   end
     
   get "home/index"

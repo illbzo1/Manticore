@@ -2,11 +2,13 @@
 
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Create Items Page', character_items_path(@character) unless @character.items.exists? %>
+<%= link_to 'Add Items Page', character_items_path(@character) unless @character.items.exists? %>
 <br />
-<%= link_to 'Create Special Abilities Page', character_specials_path(@character) unless @character.specials.exists? %>
+<%= link_to 'Add Special Abilities Page', character_specials_path(@character) unless @character.specials.exists? %>
+<br />
+<%= link_to 'Add Spells Page', character_spells_path(@character) unless @character.spells.exists? %>
 
-
+<div id="main">
 <p>
 <%= render 'details' %>
 </p>
@@ -34,3 +36,4 @@
 <p>
 <%= render 'background' %>
 </p>
+</div>

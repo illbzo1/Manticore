@@ -1,8 +1,7 @@
-<%= form_for(@ac) do |f| %>
-  <% if @ac.errors.any? %>
+<%= form_for([@character, @ac]) do |f| %>
+<% if @ac.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@ac.errors.count, "error") %> prohibited this ac from being saved:</h2>
-
       <ul>
       <% @ac.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -12,12 +11,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :total %><br />
-    <%= f.text_field :total %>
-  </div>
-  <div class="field">
     <%= f.label :base %><br />
-    <%= f.text_field :base %>
+    <%= f.text_field :base_ac %>
   </div>
   <div class="field">
     <%= f.label :armor %><br />
@@ -48,9 +43,13 @@
     <%= f.text_field :misc %>
   </div>
   <div class="field">
-    <%= f.label :reduction %><br />
+    <%= f.label :Damage_Reduction %><br />
     <%= f.text_field :reduction %>
   </div>
+  <div class="field">
+     <%= f.label :Spell_Resistance %><br />
+     <%= f.text_field :sr %>
+   </div>
   <div class="actions">
     <%= f.submit %>
   </div>

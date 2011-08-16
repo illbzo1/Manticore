@@ -1,0 +1,53 @@
+<%= form_for ([@character, @spell]) do |f| %>
+
+  <div class="field">
+  <%= f.label :Name %><br />
+  <%= f.text_field :name %>
+  </div>
+ <div class="field">
+  <%= f.label :Level %><br />
+  <%= f.text_field :level %>
+  </div>
+ <div class="field">
+  <%= f.label :School %><br />
+  <%= f.text_field :school %>
+  </div>
+  <div class="field">
+    <%= f.label :Components %><br />
+    <%= f.text_field :components %>
+  </div>
+  <div class="field">
+    <%= f.label :Casting_Time %><br />
+    <%= f.text_field :casting_time %>
+  </div>
+  <div class="field">
+    <%= f.label :Range %><br />
+    <%= f.text_field :range %>
+  </div>
+  <div class="field">
+    <%= f.label :Target %><br />
+    <%= f.text_field :target %>
+  </div>
+  <div class="field">
+    <%= f.label :Duration %><br />
+    <%= f.text_field :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :Saving_Throw %><br />
+    <%= f.text_field :saving_throw %>
+  </div>
+  <div class="field">
+    <%= f.label :Spell_Resistance %><br />
+    <%= f.text_field :spell_resistance %>
+  </div>
+  <div class="field">
+    <%= f.label :Description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', character_path(@character)  %>
+

@@ -1,6 +1,5 @@
-<h1>Editing ac</h1>
+<h1>Editing Armor for <%= @character.name %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @ac %> |
-<%= link_to 'Back', acs_path %>
+<%= link_to 'Back', character_path(@character) %>

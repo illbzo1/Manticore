@@ -1,0 +1,32 @@
+<h2><%= @character.name %>'s Spells</h2>
+
+<% @character.spells.reject {|spell| spell.new_record? }.each do |spell| %>
+    <b>Name:</b>
+    <%= spell.name %><br />
+    <b>School:</b>
+    <%= spell.school %><br />
+    <b>Level:</b>
+    <%= spell.level %><br />
+    <b>Components:</b>
+    <%= spell.components %><br />
+    <b>Casting Time:</b>
+    <%= spell.casting_time %><br />
+    <b>Range:</b>
+    <%= spell.range %><br />
+    <b>Target:</b>
+    <%= spell.target %><br />
+    <b>Duration:</b>
+    <%= spell.duration %><br />
+    <b>Saving Throw:</b>
+    <%= spell.saving_throw %><br />
+    <b>Spell Resistance:</b>
+    <%= spell.spell_resistance %><br />
+    <b>Description:</b>
+    <%= spell.description %>
+    <br /><br />
+    <%= link_to 'Destroy', [spell.character, spell], 
+                  :confirm => 'Are you sure?',
+                  :method => :delete %>
+                  <%= link_to 'Edit', edit_character_spell_path(@character, spell) %>  
+                  <br />
+<% end %>

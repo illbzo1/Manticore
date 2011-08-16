@@ -1,45 +1,45 @@
 <div id="ac" class="float_left">
+
+<% if @ac.new_record? %>
+  <%= link_to 'Add Armor Class Information', new_character_ac_path(@character) %>
+<% else %>
 <b>Armor Class Total:</b>
-<%= @ac.total || '-' %>
-
+<%= @ac.total %>
 <b>Touch:</b>
-<%= @ac.tac || '-' %>
-
+<%= @ac.touch  %>
 <b>Flat-footed:</b>
-<%= @ac.ffac || '-' %>
-
+<%= @ac.flat  %>
+<br />
 <b>Base:</b>
-<%= @ac.base || '-' %>
+<%= @ac.base_ac %>
+
 <b>Armor:</b>
-<%= @ac.armor || '-' %>
+<%= @ac.armor  %>
 
 <b>Shield:</b>
-<%= @ac.shield || '-' %>
+<%= @ac.shield  %>
 
 <b>Dexterity:</b>
-<%= @ac.dex || '-' %>
+<%= @ac.dex  %>
 
 <b>Size:</b>
-<%= @ac.size || '-' %>
+<%= @ac.size  %>
 
 <b>Natural:</b>
-<%= @ac.natural || '-' %>
+<%= @ac.natural  %>
 
 <b>Deflection:</b>
-<%= @ac.dex || '-' %>
+<%= @ac.deflection  %>
 
 <b>Miscellaneous:</b>
-<%= @ac.misc || '-' %>
+<%= @ac.misc  %>
 
 <b>Damage Reduction:</b>
-<%= @ac.reduction || '-' %>
+<%= @ac.reduction  %>
 
 <b>Spell Resistance:</b>
-<%= @ac.sr || '-' %>
+<%= @ac.sr  %>
 <br />
-<% if @ac.new_record? %>
-<%= link_to 'Add Armor Class Information', new_character_ac_path(@character) %>
-<% else %>
 <%= link_to 'Edit Armor Class Information', edit_character_ac_path(@character,@ac) %>
 <% end %>
 </div>

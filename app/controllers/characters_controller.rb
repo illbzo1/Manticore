@@ -15,7 +15,6 @@ class CharactersController < ApplicationController
     @initiative = (@character.initiative || @character.build_initiative)   
     @background = (@character.background || @character.build_background)    
      
-    
   end
   
   def new

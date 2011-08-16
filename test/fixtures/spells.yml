@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  school: MyString
+  level: MyString
+  components: MyString
+  casting_time: MyString
+  range: MyString
+  target: MyString
+  duration: MyString
+  saving_throw: MyString
+  spell_resistance: MyString
+  description: MyText
+  character: 
+
+two:
+  school: MyString
+  level: MyString
+  components: MyString
+  casting_time: MyString
+  range: MyString
+  target: MyString
+  duration: MyString
+  saving_throw: MyString
+  spell_resistance: MyString
+  description: MyText
+  character: 

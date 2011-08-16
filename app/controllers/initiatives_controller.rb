@@ -1,5 +1,5 @@
 class InitiativesController < ApplicationController
-
+  
   def new
    @character = Character.find(params[:character_id])
    @initiative = @character.create_initiative(params[:initiative])
