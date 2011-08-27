@@ -10,6 +10,8 @@ class Character < ActiveRecord::Base
   has_many :items, :dependent => :destroy
   has_many :specials, :dependent => :destroy
   has_many :spells, :dependent => :destroy
+  has_many :skills, :dependent => :destroy
+  
   
   validates_presence_of :name, :profession, :level, :sex, :alignment, :campaign
   validates_numericality_of :level

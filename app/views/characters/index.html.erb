@@ -1,14 +1,8 @@
-<h1>Listing characters</h1>
-
-<table>
-
+<%= render 'navigation' %>
+<div id="characters">
 <% @characters.each do |character| %>
-  <tr>
-    <td><%= link_to character.name, character %></td>
-  </tr>
+<div id="character_description">
+<span class="character_name"><%= link_to character.name, character %></span> <span class="character_description">Level <%= character.level %> <%= character.profession %></span>
+</div>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Character', new_character_path %>
+</div>

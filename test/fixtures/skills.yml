@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  ability: MyString
+  ability_mod: 1
+  misc_mod: 1
+  ranks: 1
+  character: 
+
+two:
+  name: MyString
+  ability: MyString
+  ability_mod: 1
+  misc_mod: 1
+  ranks: 1
+  character: 

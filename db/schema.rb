@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110816000226) do
+ActiveRecord::Schema.define(:version => 20110824225250) do
 
   create_table "acs", :force => true do |t|
     t.integer  "total"
@@ -104,6 +104,17 @@ ActiveRecord::Schema.define(:version => 20110816000226) do
     t.integer  "ability"
     t.integer  "magic"
     t.integer  "misc"
+    t.integer  "character_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "skills", :force => true do |t|
+    t.string   "name"
+    t.string   "ability"
+    t.integer  "ability_mod"
+    t.integer  "misc_mod"
+    t.integer  "ranks"
     t.integer  "character_id"
     t.datetime "created_at"
     t.datetime "updated_at"

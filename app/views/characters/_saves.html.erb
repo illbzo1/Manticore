@@ -3,21 +3,33 @@
 <% if @fortitude.new_record? %>
 <%= link_to 'Add Fortitude Saving Throw', new_character_fortitude_path(@character) %>
 <% else %>
-
-<b>Fortitude Total:</b>
+<% if @fortitude.base.present? and @fortitude.ability.present? and @fortitude.magic.present? and @fortitude.misc.present?%>
+<b>Fortitude:</b>
 <%= @fortitude.total %>
-
 <b>Base:</b>
-<%= @fortitude.base || '-' %>
+<%= @fortitude.base %>
 
 <b>Ability:</b>
-<%= @fortitude.ability || '-' %>
+<%= @fortitude.ability %>
 
 <b>Magic:</b>
-<%= @fortitude.magic || '-' %>
+<%= @fortitude.magic  %>
 
 <b>Miscellaneous:</b>
-<%= @fortitude.misc || '-' %>
+<%= @fortitude.misc  %>
+<% else %>
+<b>Base:</b>
+<%= @fortitude.base %>
+
+<b>Ability:</b>
+<%= @fortitude.ability %>
+
+<b>Magic:</b>
+<%= @fortitude.magic  %>
+
+<b>Miscellaneous:</b>
+<%= @fortitude.misc  %>
+<% end %>
 <br />
 <%= link_to 'Edit Fortitude Saving Throw', edit_character_fortitude_path(@character,@fortitude) %>
 <% end %>
@@ -26,20 +38,33 @@
 <% if @reflex.new_record? %>
 <%= link_to 'Add Reflex Saving Throw', new_character_reflex_path(@character) %>
 <% else %>
-<b>Reflex Total:</b>
+<% if @reflex.base.present? and @reflex.ability.present? and @reflex.magic.present? and @reflex.misc.present?%>
+<b>Reflex:</b>
 <%= @reflex.total %>
-
 <b>Base:</b>
-<%= @reflex.base || '-' %>
+<%= @reflex.base  %>
 
 <b>Ability:</b>
-<%= @reflex.ability || '-' %>
+<%= @reflex.ability %>
 
 <b>Magic:</b>
-<%= @reflex.magic || '-' %>
+<%= @reflex.magic %>
 
 <b>Miscellaneous:</b>
-<%= @reflex.misc || '-' %>
+<%= @reflex.misc  %>
+<% else %>
+<b>Base:</b>
+<%= @reflex.base  %>
+
+<b>Ability:</b>
+<%= @reflex.ability %>
+
+<b>Magic:</b>
+<%= @reflex.magic %>
+
+<b>Miscellaneous:</b>
+<%= @reflex.misc  %>
+<% end %>
 <br />
 <%= link_to 'Edit Reflex Saving Throw', edit_character_reflex_path(@character,@reflex) %>
 <% end %>
@@ -47,9 +72,10 @@
 <% if @will.new_record? %>
 <%= link_to 'Add Will Saving Throw', new_character_will_path(@character) %>
 <% else %>
-<b>Will Total:</b>
-<%= @will.total %>
+<% if @will.base.present? and @will.ability.present? and @will.magic.present? and @will.misc.present?%>
 
+<b>Will Save:</b>
+<%= @will.total %>
 <b>Base:</b>
 <%= @will.base %>
 
@@ -61,6 +87,19 @@
 
 <b>Miscellaneous:</b>
 <%= @will.misc %>
+<% else %>
+<b>Base:</b>
+<%= @will.base %>
+
+<b>Ability:</b>
+<%= @will.ability %>
+
+<b>Magic:</b>
+<%= @will.magic %>
+
+<b>Miscellaneous:</b>
+<%= @will.misc %>
+<% end %>
 <br />
 <%= link_to 'Edit Will Saving Throw', edit_character_will_path(@character,@will) %>
 <% end %>

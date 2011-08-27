@@ -1,0 +1,26 @@
+<%= form_for ([@character, @skill]) do |f| %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :ability %><br />
+    <%= f.text_field :ability %>
+  </div>
+  <div class="field">
+    <%= f.label :ability_mod %><br />
+    <%= f.text_field :ability_mod %>
+  </div>
+  <div class="field">
+    <%= f.label :misc_mod %><br />
+    <%= f.text_field :misc_mod %>
+  </div>
+  <div class="field">
+    <%= f.label :ranks %><br />
+    <%= f.text_field :ranks %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

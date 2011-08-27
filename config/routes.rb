@@ -1,5 +1,7 @@
 Manticore::Application.routes.draw do
 
+  resources :skills
+
   resources :characters do
     resources :statistics
     resources :fortitudes
@@ -13,6 +15,7 @@ Manticore::Application.routes.draw do
     resources :specials
     resources :feats
     resources :spells
+    resources :skills
   end
     
   get "home/index"

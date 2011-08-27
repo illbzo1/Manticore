@@ -1,11 +1,10 @@
 <div id="menu">
-<%= link_to_unless_current @character.name, character_path(@character)  %>
-<%= link_to_unless_current 'Items', character_items_path(@character) if @character.items.exists? %>
-Skills
-<%= link_to_unless_current 'Special Abilities', character_specials_path(@character) if @character.specials.exists?  %>
-<%= link_to_unless_current 'Spells', character_spells_path(@character) if @character.spells.exists?  %>
+<span id="menu_item"><%= link_to_unless_current @character.name, character_path(@character)  %></span>
+<span id="menu_item"><%= link_to_unless_current 'Items', character_items_path(@character) if @character.items.exists? %></span>
+<span id="menu_item"><%= link_to_unless_current 'Skills', character_skills_path(@character) if @character.skills.exists?  %></span>
+<span id="menu_item"><%= link_to_unless_current 'Special Abilities', character_specials_path(@character) if @character.specials.exists?  %></span>
+<span id="menu_item"><%= link_to_unless_current 'Spells', character_spells_path(@character) if @character.spells.exists?  %></span>
 <div class="float_right">
-<%= link_to 'Edit', edit_character_path(@character) %>
 <%= link_to 'Back', characters_path %>
 </div>
 </div>
