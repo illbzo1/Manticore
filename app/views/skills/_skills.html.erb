@@ -1,16 +1,17 @@
 <h2><%= @character.name %>'s Skills</h2>
 
 <% @character.skills.reject {|skill| skill.new_record? }.each do |skill| %>
-    <b>Name:</b>
-    <%= skill.name %><br />
-    <b>Ability:</b>
-    <%= skill.ability %><br />
+    <b><%= skill.name %></b><br /><br />
+    <b>Skill Modifier:</b>
+    <%= skill.total %>
+    <b>Key Ability:</b>
+    <%= skill.ability %>
     <b>Ability Modifier:</b>
-    <%= skill.ability_mod %><br />
-    <b>Miscellaneous Modifier:</b>
-    <%= skill.misc_mod %><br />
+    <%= skill.ability_mod %>
+    <b>Miscellaneous Modifier:
+    <%= skill.misc_mod %>
     <b>Ranks:</b>
     <%= skill.ranks %><br />
-<br />
  <%= link_to 'Edit', edit_character_skill_path(@character, skill) %>  
+ <br /><br />
 <% end %>

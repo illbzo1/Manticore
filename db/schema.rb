@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110824225250) do
+ActiveRecord::Schema.define(:version => 20110828203131) do
 
   create_table "acs", :force => true do |t|
     t.integer  "total"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(:version => 20110824225250) do
   end
 
   create_table "backgrounds", :force => true do |t|
-    t.text     "bg"
+    t.text     "history"
     t.text     "physical"
     t.text     "personality"
     t.integer  "character_id"

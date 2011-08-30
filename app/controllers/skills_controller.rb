@@ -3,6 +3,8 @@ class SkillsController < ApplicationController
   def index
     @character = Character.find(params[:character_id])
     @skill = @character.skills.build
+    @skills = @character.skills.find(:all, :order => 'name')
+    
   end
   
   def new
@@ -18,14 +20,14 @@ class SkillsController < ApplicationController
   def create
     @character = Character.find(params[:character_id])
     @skill = @character.skills.create(params[:skill])
-    redirect_to character_skills_path, :notice => "skill successfully created!"
+    redirect_to character_skills_path, :notice => "Skill created!"
    end
    
    def update
      @character = Character.find(params[:character_id])
      @skill = @character.skills.find(params[:id])
      if @skill.update_attributes(params[:skill])
-       redirect_to character_skills_path, :notice => 'skill was successfully updated.'
+       redirect_to character_skills_path, :notice => 'Skill updated.'
      else
        render :action => "edit"
      end
@@ -46,7 +48,7 @@ class SkillsController < ApplicationController
     @skill.destroy
     
     respond_to do |format|
-      format.html { redirect_to(character_skills_path, :notice => "skill deleted.") }
+      format.html { redirect_to(character_skills_path, :notice => "Skill deleted.") }
       format.xml  { head :ok }
     end
   end
