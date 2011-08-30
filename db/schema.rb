@@ -29,15 +29,6 @@ ActiveRecord::Schema.define(:version => 20110828203131) do
     t.integer  "sr"
   end
 
-  create_table "backgrounds", :force => true do |t|
-    t.text     "history"
-    t.text     "physical"
-    t.text     "personality"
-    t.integer  "character_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "characters", :force => true do |t|
     t.string   "name"
     t.string   "profession"
