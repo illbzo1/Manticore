@@ -1,6 +1,5 @@
 <h2><%= @character.name %>'s Skills</h2>
-
-<% @character.skills.reject {|skill| skill.new_record? }.each do |skill| %>
+<% @sorted_skills.reject {|skill| skill.new_record? }.each do |skill| %>
     <b><%= skill.name %></b><br /><br />
     <b>Skill Modifier:</b>
     <%= skill.total %>

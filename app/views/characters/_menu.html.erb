@@ -1,11 +1,17 @@
 <div id="menu">
-<span id="menu_item"><%= link_to_unless_current @character.name, character_path(@character)  %></span>
-<span id="menu_item"><%= link_to_unless_current 'Items', character_items_path(@character) if @character.items.exists? %></span>
-<span id="menu_item"><%= link_to_unless_current 'Skills', character_skills_path(@character) if @character.skills.exists?  %></span>
-<span id="menu_item"><%= link_to_unless_current 'Special Abilities', character_specials_path(@character) if @character.specials.exists?  %></span>
-<span id="menu_item"><%= link_to_unless_current 'Spells', character_spells_path(@character) if @character.spells.exists?  %></span>
-
-<div class="float_right">
+<span id="menu_item">
+<span class="menu_item"><%= link_to_unless_current @character.name, character_path(@character)  %></span>
+<span class="menu_item"><%= link_to_unless_current 'Items', character_items_path(@character) if @character.items.exists? %></span>
+<span class="menu_item"><%= link_to_unless_current 'Skills', character_skills_path(@character) if @character.skills.exists?  %></span>
+<span class="menu_item"><%= link_to_unless_current 'Special Abilities', character_specials_path(@character) if @character.specials.exists?  %></span>
+<span class="menu_item"><%= link_to_unless_current 'Spells', character_spells_path(@character) if @character.spells.exists?  %></span>
+</span>
+<span class="create_item">Create:</span>
+<span class="create_item"><%= link_to 'Items Page', character_items_path(@character) unless @character.items.exists? %></span>
+<span class="create_item"><%= link_to 'Skills Page', character_skills_path(@character) unless @character.skills.exists? %></span>
+<span class="create_item"><%= link_to 'Special Abilities Page', character_specials_path(@character) unless @character.specials.exists? %></span>
+<span class="create_item"><%= link_to 'Spells Page', character_spells_path(@character) unless @character.spells.exists? %></span>
+<span id="float_right">
 <%= link_to 'Back', characters_path %>
-</div>
+</span>
 </div>

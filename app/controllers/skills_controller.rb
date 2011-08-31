@@ -3,8 +3,7 @@ class SkillsController < ApplicationController
   def index
     @character = Character.find(params[:character_id])
     @skill = @character.skills.build
-    @skills = @character.skills.find(:all, :order => 'name')
-    
+    @sorted_skills = @character.skills.find(:all, :order => :name)
   end
   
   def new

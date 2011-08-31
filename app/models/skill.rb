@@ -4,5 +4,5 @@ class Skill < ActiveRecord::Base
   def total
      ability_mod + misc_mod + ranks
   end
-    
+  
 end

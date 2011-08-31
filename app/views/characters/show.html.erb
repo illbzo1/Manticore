@@ -1,15 +1,6 @@
 <%= render 'menu' %>
 
 <p id="notice"><%= notice %></p>
-<div id="create">
-Create:
-<span class="create"><%= link_to 'Items Page', character_items_path(@character) unless @character.items.exists? %></span>
-<span class="create"><%= link_to 'Skills Page', character_skills_path(@character) unless @character.skills.exists? %></span>
-<span class="create"><%= link_to 'Special Abilities Page', character_specials_path(@character) unless @character.specials.exists? %></span>
-<span class="create"><%= link_to 'Spells Page', character_spells_path(@character) unless @character.spells.exists? %></span>
-
-
-</div>
 
 <div id="main">
 <p>

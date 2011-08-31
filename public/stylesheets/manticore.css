@@ -33,14 +33,16 @@ h1 {
   margin: 10px;
 }
 
-.float_right {  
+#float_right {  
   float: right;
+  margin-left: .5em;
 }
 
 /* Navigation styles */
    
 #menu {
      background-color: #2b2b2b;
+     height: 1.3em;
      border-bottom: 1px solid #555555;
      padding: 5px;
      }
@@ -52,7 +54,13 @@ h1 {
      }
      
 #menu_item {
+  margin-right: 20em;
+  float: left;
+}
+
+.menu_item {
   margin-right: 10px;
+  float: left;
 }
      
 /* Landing page styles */
@@ -92,11 +100,12 @@ h1 {
 }
 
 #create {
-  margin: 5px;
+  border: 1px solid #fff;
 }
 
-.create {
-  margin: 2px;
+.create_item {
+  float: left;
+  margin-right: .3em;  
 }
 
 #character_description {
