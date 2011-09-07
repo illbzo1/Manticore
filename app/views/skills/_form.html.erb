@@ -1,5 +1,15 @@
 <%= form_for ([@character, @skill]) do |f| %>
-
+<% if @skill.errors.any? %>
+    <div id="error_explanation">
+      <%= pluralize(@skill.errors.count, "error") %> prohibited this record from                 
+        being saved:
+      <ul>
+        <% @skill.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>

@@ -1,8 +1,7 @@
 class CreateFortitudes < ActiveRecord::Migration
   def self.up
     create_table :fortitudes do |t|
-      t.integer :total
-      t.integer :base
+      t.integer :fortitude_base
       t.integer :ability
       t.integer :magic
       t.integer :misc

@@ -1,19 +1,8 @@
-<p id="notice"><%= notice %></p>
+<body id="bg_page">
+  <span class="list"><%= @character.background.physical %></span>
+  <span class="list"><%= @character.background.personality %></span>
+  <span class="list"><%= @character.background.history  %></span>
 
-<p>
-  <b>History:</b>
-  <%= @background.history %>
-</p>
-
-<p>
-  <b>Physical:</b>
-  <%= @background.physical %>
-</p>
-
-<p>
-  <b>Personality:</b>
-  <%= @background.personality %>
-</p>
-
-<%= link_to 'Edit', edit_background_path(@background) %> |
-<%= link_to 'Back', backgrounds_path %>
+  <span class="list"><%= link_to 'Edit', edit_character_background_path(@character, @background) %></span>
+  
+</body>

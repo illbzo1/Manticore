@@ -2,7 +2,7 @@ class StatisticsController < ApplicationController
 
   def new
    @character = Character.find(params[:character_id])
-   @statistic = @character.create_statistic(params[:statistic])
+   @statistic = @character.build_statistic(params[:statistic])
   end
 
   def edit
@@ -10,10 +10,14 @@ class StatisticsController < ApplicationController
    @statistic = @character.statistic
   end
  
-  def create
-    @character = Character.find(params[:character_id])
-    @statistic = @character.create_statistic(params[:statistic])
-    redirect_to character_path(@character), :notice => 'Statistics were successfully created.'
+   def create
+     @character = Character.find(params[:character_id])
+     @statistic = @character.create_statistic(params[:statistic])
+     if @statistic.save
+     redirect_to character_path(@character), :notice => "Statistics successfully created!"
+   else
+     render :action => "new"
+    end
   end
 
   def update

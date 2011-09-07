@@ -18,8 +18,12 @@ class ItemsController < ApplicationController
   def create
     @character = Character.find(params[:character_id])
     @item = @character.items.create(params[:item])
+    if @item.save
     redirect_to character_items_path, :notice => "Item successfully created!"
+  else
+    render :action => "new"
    end
+ end
    
    def update
      @character = Character.find(params[:character_id])

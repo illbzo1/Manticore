@@ -1,16 +1,13 @@
-<h2><%= @character.name %>'s Skills</h2>
-<% @sorted_skills.reject {|skill| skill.new_record? }.each do |skill| %>
-    <b><%= skill.name %></b><br /><br />
-    <b>Skill Modifier:</b>
-    <%= skill.total %>
-    <b>Key Ability:</b>
-    <%= skill.ability %>
-    <b>Ability Modifier:</b>
-    <%= skill.ability_mod %>
-    <b>Miscellaneous Modifier:
-    <%= skill.misc_mod %>
-    <b>Ranks:</b>
-    <%= skill.ranks %><br />
- <%= link_to 'Edit', edit_character_skill_path(@character, skill) %>  
+<body id="skills">
+<div id="skill_set">
+<% @character.skills.reject {|skill| skill.new_record? }.each do |skill| %>
+    <span class="list_title"><%= skill.name %></span>
+    <span class="list">Skill Modifier: <%= skill.total %></span>
+    <span class="list">Ability Modifier: <%= skill.ability_mod %></span>
+    <span class="list">Ranks: <%= skill.ranks %></span>
+    <span class="list">Miscellaneous Modifier: <%= skill.misc_mod %></span>
+ <%= link_to 'Edit', edit_character_skill_path(@character, skill) %> 
  <br /><br />
 <% end %>
+</div>
+</body>

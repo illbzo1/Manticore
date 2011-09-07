@@ -1,25 +1,3 @@
-<p id="notice"><%= notice %></p>
+<%= render '/characters/menu' %>
 
-<p>
-  <b>History:</b>
-  <%= @background.history %>
-</p>
-
-<p>
-  <b>Physical:</b>
-  <%= @background.physical %>
-</p>
-
-<p>
-  <b>Personality:</b>
-  <%= @background.personality %>
-</p>
-
-<p>
-  <b>Character:</b>
-  <%= @background.character %>
-</p>
-
-
-<%= link_to 'Edit', edit_background_path(@background) %> |
-<%= link_to 'Back', backgrounds_path %>
+<%= render 'background' %>

@@ -1,8 +1,7 @@
 class CreateReflexes < ActiveRecord::Migration
   def self.up
     create_table :reflexes do |t|
-      t.integer :total
-      t.integer :base
+      t.integer :reflex_base
       t.integer :ability
       t.integer :magic
       t.integer :misc

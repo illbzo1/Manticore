@@ -1,4 +1,5 @@
-<h2><%= @character.name %>'s Spells</h2>
+<body id="spells">
+  <h2><%= @character.name %>'s Spells</h2>
 
 <% @character.spells.reject {|spell| spell.new_record? }.each do |spell| %>
     <b>Name:</b>
@@ -30,3 +31,4 @@
                   <%= link_to 'Edit', edit_character_spell_path(@character, spell) %>  
                   <br />
 <% end %>
+</body>

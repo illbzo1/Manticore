@@ -3,11 +3,11 @@
 <% if @fortitude.new_record? %>
 <%= link_to 'Add Fortitude Saving Throw', new_character_fortitude_path(@character) %>
 <% else %>
-<% if @fortitude.base.present? and @fortitude.ability.present? and @fortitude.magic.present? and @fortitude.misc.present?%>
+<% if @fortitude.fortitude_base.present? and @fortitude.ability.present? and @fortitude.magic.present? and @fortitude.misc.present?%>
 <b>Fortitude:</b>
 <%= @fortitude.total %>
 <b>Base:</b>
-<%= @fortitude.base %>
+<%= @fortitude.fortitude_base %>
 
 <b>Ability:</b>
 <%= @fortitude.ability %>
@@ -19,7 +19,7 @@
 <%= @fortitude.misc  %>
 <% else %>
 <b>Base:</b>
-<%= @fortitude.base %>
+<%= @fortitude.fortitude_base %>
 
 <b>Ability:</b>
 <%= @fortitude.ability %>
@@ -38,11 +38,11 @@
 <% if @reflex.new_record? %>
 <%= link_to 'Add Reflex Saving Throw', new_character_reflex_path(@character) %>
 <% else %>
-<% if @reflex.base.present? and @reflex.ability.present? and @reflex.magic.present? and @reflex.misc.present?%>
+<% if @reflex.reflex_base.present? and @reflex.ability.present? and @reflex.magic.present? and @reflex.misc.present?%>
 <b>Reflex:</b>
 <%= @reflex.total %>
 <b>Base:</b>
-<%= @reflex.base  %>
+<%= @reflex.reflex_base  %>
 
 <b>Ability:</b>
 <%= @reflex.ability %>
@@ -54,7 +54,7 @@
 <%= @reflex.misc  %>
 <% else %>
 <b>Base:</b>
-<%= @reflex.base  %>
+<%= @reflex.reflex_base  %>
 
 <b>Ability:</b>
 <%= @reflex.ability %>
@@ -72,12 +72,12 @@
 <% if @will.new_record? %>
 <%= link_to 'Add Will Saving Throw', new_character_will_path(@character) %>
 <% else %>
-<% if @will.base.present? and @will.ability.present? and @will.magic.present? and @will.misc.present?%>
+<% if @will.will_base.present? and @will.ability.present? and @will.magic.present? and @will.misc.present?%>
 
 <b>Will Save:</b>
 <%= @will.total %>
 <b>Base:</b>
-<%= @will.base %>
+<%= @will.will_base %>
 
 <b>Ability:</b>
 <%= @will.ability %>
@@ -89,7 +89,7 @@
 <%= @will.misc %>
 <% else %>
 <b>Base:</b>
-<%= @will.base %>
+<%= @will.will_base %>
 
 <b>Ability:</b>
 <%= @will.ability %>

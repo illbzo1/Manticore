@@ -1,20 +1,14 @@
-<%= form_for(@background) do |f| %>
-  <% if @background.errors.any? %>
+<%= form_for ([@character, @background]) do |f| %>
+<% if @background.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@background.errors.count, "error") %> prohibited this background from being saved:</h2>
-
+      <h2><%= pluralize(@background.errors.count, "error") %> prohibited this record from being saved:</h2>
       <ul>
-      <% @background.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @background.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :history %><br />
-    <%= f.text_area :history %>
-  </div>
   <div class="field">
     <%= f.label :physical %><br />
     <%= f.text_area :physical %>
@@ -24,8 +18,8 @@
     <%= f.text_area :personality %>
   </div>
   <div class="field">
-    <%= f.label :character %><br />
-    <%= f.text_field :character %>
+    <%= f.label :history %><br />
+    <%= f.text_area :history %>
   </div>
   <div class="actions">
     <%= f.submit %>

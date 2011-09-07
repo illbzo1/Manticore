@@ -2,7 +2,7 @@ class AcsController < ApplicationController
 
   def new
    @character = Character.find(params[:character_id])
-   @ac = @character.build_ac
+   @ac = @character.build_ac(params[:ac])
   end
 
   def edit
@@ -10,10 +10,14 @@ class AcsController < ApplicationController
    @ac = @character.ac
   end
  
-  def create
-    @character = Character.find(params[:character_id])
-    @ac = @character.create_ac(params[:ac])
-    redirect_to character_path(@character), :notice => 'Armor Class was successfully created.'
+   def create
+     @character = Character.find(params[:character_id])
+     @ac = @character.create_ac(params[:ac])
+     if @ac.save
+     redirect_to character_path(@character), :notice => "Armor Class information successfully created!"
+   else
+     render :action => "new"
+    end
   end
 
   def update

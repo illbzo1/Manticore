@@ -2,7 +2,7 @@ class InitiativesController < ApplicationController
 
   def new
    @character = Character.find(params[:character_id])
-   @initiative = @character.create_initiative(params[:initiative])
+   @initiative = @character.build_initiative(params[:initiative])
   end
 
   def edit
@@ -10,17 +10,21 @@ class InitiativesController < ApplicationController
    @initiative = @character.initiative
   end
  
-  def create
-    @character = Character.find(params[:character_id])
-    @initiative = @character.initiative(params[:initiative])
-    redirect_to character_path(@character), :notice => 'Initiative was successfully created.'
+   def create
+     @character = Character.find(params[:character_id])
+     @initiative = @character.create_initiative(params[:initiative])
+     if @initiative.save
+     redirect_to character_path(@character), :notice => "initiative successfully created!"
+   else
+     render :action => "new"
+    end
   end
 
   def update
     @character = Character.find(params[:character_id])
     @initiative = @character.initiative
     if @initiative.update_attributes(params[:initiative])
-      redirect_to character_path(@character), :notice => 'Initiative was successfully updated.'
+      redirect_to character_path(@character), :notice => 'Initiative information was successfully updated.'
     else
       render :action => "edit"
     end

@@ -1,4 +1,15 @@
 <%= form_for ([@character, @item]) do |f| %>
+<% if @item.errors.any? %>
+    <div id="error_explanation">
+      <%= pluralize(@item.errors.count, "error") %> prohibited this record from                 
+        being saved:
+      <ul>
+        <% @item.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
@@ -19,6 +30,7 @@
     <%= f.submit %>
   </div>
 <% end %>
+<%= link_to 'Destroy', [@item.character, @item], :confirm => 'Are you sure?', :method => :delete %>
 
 <%= link_to 'Back', character_path(@character)  %>
 

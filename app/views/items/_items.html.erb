@@ -1,18 +1,11 @@
-<h2><%= @character.name %>'s Inventory</h2>
+<body id="items">
 
 <% @character.items.reject {|item| item.new_record? }.each do |item| %>
-    <b>Name:</b>
-    <%= item.name %>
-    <b>Type:</b>
-    <%= item.item_type %>
-    <b>Location:</b>
-    <%= item.location %>
-    <b>Description:</b>
-    <%= item.description %>
-    <br />
-    <%= link_to 'Destroy', [item.character, item], 
-                  :confirm => 'Are you sure?',
-                  :method => :delete %>
-                  <%= link_to 'Edit', edit_character_item_path(@character, item) %>  
-                  <br />
+    <span class="list_title"><%= item.name %></span>
+    <span class="list"><%= item.item_type %></span>
+    <span class="list"><%= item.location %></span>
+    <span class="list"><%= item.description %></span>
+    <span class="list"><%= link_to 'Edit', edit_character_item_path(@character, item) %></span>
+    <br /><br />
 <% end %>
+</body>

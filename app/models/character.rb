@@ -16,4 +16,6 @@ class Character < ActiveRecord::Base
   validates_presence_of :name, :profession, :level, :sex, :alignment, :campaign
   validates_numericality_of :level
   
+  accepts_nested_attributes_for :background
+  
 end

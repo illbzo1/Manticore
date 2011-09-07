@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110828203131) do
+ActiveRecord::Schema.define(:version => 20110906215735) do
 
   create_table "acs", :force => true do |t|
     t.integer  "total"
@@ -27,6 +27,15 @@ ActiveRecord::Schema.define(:version => 20110828203131) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "sr"
+  end
+
+  create_table "backgrounds", :force => true do |t|
+    t.text     "physical"
+    t.text     "personality"
+    t.text     "history"
+    t.integer  "character_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "characters", :force => true do |t|
@@ -51,7 +60,7 @@ ActiveRecord::Schema.define(:version => 20110828203131) do
 
   create_table "fortitudes", :force => true do |t|
     t.integer  "total"
-    t.integer  "base"
+    t.integer  "fortitude_base"
     t.integer  "ability"
     t.integer  "magic"
     t.integer  "misc"
@@ -91,7 +100,7 @@ ActiveRecord::Schema.define(:version => 20110828203131) do
 
   create_table "reflexes", :force => true do |t|
     t.integer  "total"
-    t.integer  "base"
+    t.integer  "reflex_base"
     t.integer  "ability"
     t.integer  "magic"
     t.integer  "misc"
@@ -151,7 +160,7 @@ ActiveRecord::Schema.define(:version => 20110828203131) do
   end
 
   create_table "wills", :force => true do |t|
-    t.integer  "base"
+    t.integer  "will_base"
     t.integer  "ability"
     t.integer  "magic"
     t.integer  "misc"

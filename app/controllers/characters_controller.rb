@@ -13,6 +13,7 @@ class CharactersController < ApplicationController
     @ac = (@character.ac || @character.build_ac)
     @hp = (@character.hp || @character.build_hp)
     @initiative = (@character.initiative || @character.build_initiative)   
+    
   end
   
   def new

@@ -3,7 +3,6 @@ class SkillsController < ApplicationController
   def index
     @character = Character.find(params[:character_id])
     @skill = @character.skills.build
-    @sorted_skills = @character.skills.find(:all, :order => :name)
   end
   
   def new
@@ -19,14 +18,17 @@ class SkillsController < ApplicationController
   def create
     @character = Character.find(params[:character_id])
     @skill = @character.skills.create(params[:skill])
-    redirect_to character_skills_path, :notice => "Skill created!"
+    if @skill.save
+    redirect_to character_skills_path, :notice => "Skill successfully created!"
+  else
+    render :action => "new"
    end
    
    def update
      @character = Character.find(params[:character_id])
      @skill = @character.skills.find(params[:id])
      if @skill.update_attributes(params[:skill])
-       redirect_to character_skills_path, :notice => 'Skill updated.'
+       redirect_to character_skills_path, :notice => 'Skill was successfully updated.'
      else
        render :action => "edit"
      end
@@ -51,5 +53,5 @@ class SkillsController < ApplicationController
       format.xml  { head :ok }
     end
   end
-
+end
 end

@@ -5,14 +5,14 @@ a {
 }
 
 a:link {color: #fcb915; text-decoration: underline; }
-a:active {color: #fcb915; text-decoration: underline; }
+a:active {color: #fcb915; text-decoration: none; }
 a:visited {color: #fcb915; text-decoration: underline; }
 a:hover {color: #fcb915; text-decoration: none; }
 
 body {
 background-color: #2b2b2b;
 font-family: Helvetica, Verdana, sans-serif; 
-font-size: 16px;
+font-size: 14px;
 color: #ffffff;
 }
 
@@ -38,8 +38,29 @@ h1 {
   margin-left: .5em;
 }
 
+#error_explanation {
+  border: 1px solid #555555;
+  background-color: #444444;
+  margin: 5px;
+  padding: 5px;
+}
+
 /* Navigation styles */
-   
+
+body#character .character_menu a,
+body#items .item_menu a,
+body#skills .skill_menu a,
+body#spells .spell_menu a,
+body#specials .special_menu a { 
+  color: #fff;
+  text-decoration: none; 
+}
+
+#character_menu  {
+margin-right: 10px;
+float: left;
+}
+
 #menu {
      background-color: #2b2b2b;
      height: 1.3em;
@@ -54,8 +75,6 @@ h1 {
      }
      
 #menu_item {
-  margin-right: 20em;
-  float: left;
 }
 
 .menu_item {
@@ -103,9 +122,22 @@ h1 {
   border: 1px solid #fff;
 }
 
-.create_item {
+.list_title {
+  font-weight: bold;
+  width: 10em;
   float: left;
-  margin-right: .3em;  
+}
+.list {
+  float: left;
+  margin-right: 1em;
+}
+
+#skill_set {
+ }
+
+
+.create_item {
+  
 }
 
 #character_description {
@@ -128,9 +160,7 @@ h1 {
 }
     
 }
-#characters {
-  
-}
+
 #details {
 
 }

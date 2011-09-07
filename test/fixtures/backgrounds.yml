@@ -1,13 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  history: MyText
   physical: MyText
   personality: MyText
+  history: MyText
   character: 
 
 two:
-  history: MyText
   physical: MyText
   personality: MyText
+  history: MyText
   character: 

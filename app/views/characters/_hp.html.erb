@@ -5,12 +5,6 @@
 <% else %>
 <b>Total HP:</b>
 <%= @hp.total %>
-
-<b>Current HP:</b>
-<%= @hp.current %>
-
-<b>Nonlethal Damage:</b>
-<%= @hp.nonlethal %>
 <br />
   <%= link_to 'Edit Hit Points', edit_character_hp_path(@character,@hp) %>
 <% end %>
