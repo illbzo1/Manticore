@@ -1,3 +1,5 @@
 <h1>Editing <%= @character.name %>'s <%= @character.items.find(params[:id]).name %> </h1>
 
 <%= render 'form' %>
+
+<%= button_to 'Destroy Item', [@item.character, @item], :confirm => 'Are you sure?', :method => :delete %>

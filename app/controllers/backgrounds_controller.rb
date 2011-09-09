@@ -11,7 +11,7 @@ class BackgroundsController < ApplicationController
   end
 
   def edit
-   @character = Character.find(params[:id])
+   @character = Character.find(params[:character_id])
    @background = @character.background
   end
  
@@ -29,7 +29,7 @@ class BackgroundsController < ApplicationController
     @character = Character.find(params[:character_id])
     @background = @character.background
     if @background.update_attributes(params[:background])
-      redirect_to character_path(@character), :notice => 'Background information was successfully updated.'
+      redirect_to character_backgrounds_path, :notice => "Background successfully updated!"
     else
       render :action => "edit"
     end

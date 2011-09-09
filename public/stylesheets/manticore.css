@@ -51,7 +51,8 @@ body#character .character_menu a,
 body#items .item_menu a,
 body#skills .skill_menu a,
 body#spells .spell_menu a,
-body#specials .special_menu a { 
+body#specials .special_menu a,
+body#bg_page .bg_menu a { 
   color: #fff;
   text-decoration: none; 
 }
