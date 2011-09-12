@@ -1,11 +1,6 @@
 <div id="hp" class="float_left">
 
-<% if @hp.new_record? %>
-  <%= link_to 'Add Hit Points', new_character_hp_path(@character) %>
-<% else %>
-<b>Total HP:</b>
+<b>Hit Points:</b>
 <%= @hp.total %>
-<br />
-  <%= link_to 'Edit Hit Points', edit_character_hp_path(@character,@hp) %>
-<% end %>
+<%= link_to 'Edit', edit_character_hp_path(@character,@hp) %>
 </div>

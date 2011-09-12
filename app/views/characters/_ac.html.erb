@@ -1,45 +1,19 @@
 <div id="ac" class="float_left">
 
-<% if @ac.new_record? %>
-  <%= link_to 'Add Armor Class Information', new_character_ac_path(@character) %>
-<% else %>
-<b>Armor Class Total:</b>
+<b>Armor Class:</b>
 <%= @ac.total %>
+<br />
 <b>Touch:</b>
 <%= @ac.touch  %>
+<br />
 <b>Flat-footed:</b>
 <%= @ac.flat  %>
 <br />
-<b>Base:</b>
-<%= @ac.base_ac %>
-
-<b>Armor:</b>
-<%= @ac.armor  %>
-
-<b>Shield:</b>
-<%= @ac.shield  %>
-
-<b>Dexterity:</b>
-<%= @ac.dex  %>
-
-<b>Size:</b>
-<%= @ac.size  %>
-
-<b>Natural:</b>
-<%= @ac.natural  %>
-
-<b>Deflection:</b>
-<%= @ac.deflection  %>
-
-<b>Miscellaneous:</b>
-<%= @ac.misc  %>
-
 <b>Damage Reduction:</b>
 <%= @ac.reduction  %>
-
+<br />
 <b>Spell Resistance:</b>
 <%= @ac.sr  %>
 <br />
-<%= link_to 'Edit Armor Class Information', edit_character_ac_path(@character,@ac) %>
-<% end %>
+<%= link_to 'Edit', edit_character_ac_path(@character,@ac) %>
 </div>

@@ -1,9 +1,5 @@
 <div id="stats" class="float_left">
 
-
-<% if @statistic.new_record? %>
-  <%= link_to 'Add Statistics', new_character_statistic_path(@character) %>
-<% else %>
 <b>Strength:</b>
 <%= @statistic.strength %>
 <br />
@@ -27,6 +23,5 @@
 <b>Charisma:</b>
 <%= @statistic.charisma  %>
 <br />
-  <%= link_to 'Edit Statistics', edit_character_statistic_path(@character,@statistic) %>
-<% end %>
+<%= link_to 'Edit', edit_character_statistic_path(@character,@statistic) %>
 </div>

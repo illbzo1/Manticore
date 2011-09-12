@@ -1,0 +1,21 @@
+<div id="reflexsave" class="float_left">
+<% if @reflex.reflex_base.present? and @reflex.ability.present? and @reflex.magic.present? and @reflex.misc.present?%>
+<b>Reflex:</b>
+<%= @reflex.total %>
+
+<% else %>
+<b>Base:</b>
+<%= @reflex.reflex_base  %>
+
+<b>Ability:</b>
+<%= @reflex.ability %>
+
+<b>Magic:</b>
+<%= @reflex.magic %>
+
+<b>Miscellaneous:</b>
+<%= @reflex.misc  %>
+<% end %>
+<%= link_to 'Edit', edit_character_reflex_path(@character,@reflex) %>
+
+</div>

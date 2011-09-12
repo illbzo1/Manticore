@@ -6,9 +6,13 @@
 <span class="special_menu"><%= link_to 'Special Abilities', character_specials_path(@character) if @character.specials.exists?  %></span>
 <span class="spell_menu"><%= link_to 'Spells', character_spells_path(@character) if @character.spells.exists?  %></span>
 <span class="bg_menu"><%= link_to 'Background', character_backgrounds_path(@character) if @character.background %></span>
-
-</span>
 <div id="float_right">
-<%= link_to 'Back', characters_path %>
+  <div id="create">
+  <% unless @menu_items %>
+    <%= render 'characters/menu_create'%>
+  <% end %>
+  </div>
 </div>
+</span>
+
 </div>

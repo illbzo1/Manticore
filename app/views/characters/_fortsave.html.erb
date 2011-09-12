@@ -1,0 +1,20 @@
+<div id="fortsave" class="float_left">
+<% if @fortitude.fortitude_base.present? and @fortitude.ability.present? and @fortitude.magic.present? and @fortitude.misc.present?%>
+<b>Fortitude:</b>
+<%= @fortitude.total %>
+
+<% else %>
+<b>Base:</b>
+<%= @fortitude.fortitude_base %>
+
+<b>Ability:</b>
+<%= @fortitude.ability %>
+
+<b>Magic:</b>
+<%= @fortitude.magic  %>
+
+<b>Miscellaneous:</b>
+<%= @fortitude.misc  %>
+<% end %>
+<%= link_to 'Edit', edit_character_fortitude_path(@character,@fortitude) %>
+</div>

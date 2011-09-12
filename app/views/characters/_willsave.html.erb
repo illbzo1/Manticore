@@ -1,0 +1,21 @@
+<div id="willsave" class="float_left">
+<% if @will.will_base.present? and @will.ability.present? and @will.magic.present? and @will.misc.present?%>
+
+<b>Will Save:</b>
+<%= @will.total %>
+
+<% else %>
+<b>Base:</b>
+<%= @will.will_base %>
+
+<b>Ability:</b>
+<%= @will.ability %>
+
+<b>Magic:</b>
+<%= @will.magic %>
+
+<b>Miscellaneous:</b>
+<%= @will.misc %>
+<% end %>
+<%= link_to 'Edit', edit_character_will_path(@character,@will) %>
+</div>

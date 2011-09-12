@@ -18,4 +18,11 @@ class Character < ActiveRecord::Base
   
   accepts_nested_attributes_for :background
   
+  def menu_pages
+    items.exists? and skills.exists? and specials.exists? and spells.exists? and background
+  end
+  
+  def character_pages
+    statistic or hp or ac or initiative or fortitude or reflex or will
+  end
 end

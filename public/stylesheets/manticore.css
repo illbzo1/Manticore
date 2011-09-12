@@ -25,12 +25,10 @@ h1 {
   color:  #ffffff;
   font-size: 16px;
   margin: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px; 
-  padding-right: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   float: left;
-  margin: 10px;
+  margin: 5px;
 }
 
 #float_right {  
@@ -68,12 +66,6 @@ float: left;
      border-bottom: 1px solid #555555;
      padding: 5px;
      }
-
-#navigation {
-     background-color: #2b2b2b;
-     border-bottom: 1px solid #555555;
-     padding: 5px;
-     }
      
 #menu_item {
 }
@@ -107,6 +99,23 @@ float: left;
 
 /* Interior page styles */
 
+#create {
+  margin-bottom: 1em;
+  float: left;
+  width: 100%;
+}
+
+#main {
+  margin-top: 1em;
+  width: 100%;
+}
+
+#new_character {
+     background-color: #2b2b2b;
+     border-bottom: 1px solid #555555;
+     padding: 5px;
+     }
+     
 #characters {
   height: 550px;
   width: 800px;
@@ -119,9 +128,6 @@ float: left;
   background-color: #444444;
 }
 
-#create {
-  border: 1px solid #fff;
-}
 
 .list_title {
   font-weight: bold;
@@ -163,29 +169,49 @@ float: left;
 }
 
 #details {
-
+  margin: 1em;
+  float: left;
+  border: 1px solid #fff;
 }
 
 #hp {
-
+  margin: 1em;
+  float: left;
+  border: 1px solid #fff;
+  
 }
 
 #ac {
-  width: 40em;
-  clear: right;
+margin: 1em;
+float: left;
 }
 
 #stats {
   clear: left;
-  height: 12em;
+  margin: 1em;
+}
+
+#fortsave {
+  margin: 1em;
+   float: left;
+}
+
+#reflexsave {
+  margin: 1em;
+  float: left;
+}
+
+#willsave {
+  margin: 1em;
+  float: left;
 }
 
 #saves {
-
+  clear: left;
 }
-
 #initiative {
-}
+  margin: 1em;
+  float: left;}
 
 #background {
   clear: left;

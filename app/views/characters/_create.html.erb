@@ -1,0 +1,28 @@
+Add:
+<% if @statistic.new_record? %>
+  <%= link_to 'Statistics', new_character_statistic_path(@character) %>
+<% end %>
+
+<% if @hp.new_record? %>
+  <%= link_to 'Hit Points', new_character_hp_path(@character) %>
+<% end %>
+
+<% if @ac.new_record? %>
+  <%= link_to 'Armor Class Information', new_character_ac_path(@character) %>
+<% end %>
+
+<% if @initiative.new_record? %>
+  <%= link_to 'Initiative', new_character_initiative_path(@character) %>
+<% end %>
+
+  <% if @fortitude.new_record? %>
+  <%= link_to 'Fortitude Save', new_character_fortitude_path(@character) %>
+  <% end %>
+  
+  <% if @reflex.new_record? %>
+  <%= link_to 'Reflex Save', new_character_reflex_path(@character) %>
+  <% end %>
+  
+  <% if @will.new_record? %>
+  <%= link_to 'Will Save', new_character_will_path(@character) %>
+    <% end %>

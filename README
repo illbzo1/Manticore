@@ -2,3 +2,5 @@ First commit! Back to working on Manticore after a couple of months learning abo
 ---
 Second commit! Not really my second commit, but I want to get back in the habit of documenting what I'm doing. I've got Background straightened out (finally) and this update also has a ton of minor updates to stylings and form displays.
 ---
+Third commit - Updated quite a few things, mostly abstracting logic and working with defining new methods in various models to aid in said abstraction. Definitely fattening those models UP.
+---

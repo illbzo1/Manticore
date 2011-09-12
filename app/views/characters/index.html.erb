@@ -1,8 +1,11 @@
-<%= render 'navigation' %>
+<div id="new_character">
+<%= link_to 'New Character', new_character_path %>
+</div>
 <div id="characters">
 <% @characters.each do |character| %>
 <div id="character_description">
 <span class="character_name"><%= link_to character.name, character %></span> <span class="character_description">Level <%= character.level %> <%= character.profession %></span>
 </div>
 <% end %>
+
 </div>

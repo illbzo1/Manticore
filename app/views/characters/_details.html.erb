@@ -1,5 +1,4 @@
 <div id="details" class="float_left">
-
 <b>Name:</b>
 <%= @character.name %>
 
@@ -17,7 +16,5 @@
 
 <b>Campaign:</b>
 <%= @character.campaign %>
-<br />
-<%= link_to 'Edit Character Details', edit_character_path(@character) %>
-
+<%= link_to 'Edit', edit_character_path(@character) %>
 </div>

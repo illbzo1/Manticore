@@ -1,20 +1,9 @@
 <div id="initiative" class="float_left"> 
 
-<% if @initiative.new_record? %>
-  <%= link_to 'Add Initiative Information', new_character_initiative_path(@character) %>
-<% else %>
-<b>Initiative Total:</b>
+<b>Initiative:</b>
 <%= @initiative.total %>
-
-<b>Dexterity Modifier:</b>
-<%= @initiative.dex || 'Not set' %>
-
-<b>Miscellaneous Modifier:</b>
-<%= @initiative.misc || 'Not set' %>
 
 <b>Speed:</b>
 <%= @initiative.speed || 'Not set' %>
-<br />
-  <%= link_to 'Edit Initiative Information', edit_character_initiative_path(@character,@initiative) %>
-<% end %>
+<%= link_to 'Edit', edit_character_initiative_path(@character,@initiative) %>
 </div>

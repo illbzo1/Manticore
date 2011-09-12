@@ -1,0 +1,28 @@
+<% unless @statistic.new_record? %>
+  <%= render 'statistics' %>
+  <% end %>
+  
+<% unless @hp.new_record? %>
+  <%= render 'hp' %>
+<% end %>
+
+<% unless @ac.new_record? %>
+<%= render 'ac' %>
+<% end %>
+
+<% unless @initiative.new_record? %>
+<%= render 'initiative' %>
+<% end %>
+<div id="saves">
+<% unless @fortitude.new_record? %>
+<%= render 'fortsave' %>
+<% end %>
+
+<% unless @reflex.new_record? %>
+<%= render 'reflexsave' %>
+<% end %>
+
+<% unless @will.new_record? %>
+<%= render 'willsave' %>
+</div>
+<% end %>
